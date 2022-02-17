@@ -1,21 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
 <%
-    //1. create cookies
-    Cookie Name=new Cookie("Name",request.getParameter("name"));
-    Cookie PRN=new Cookie("PRN",request.getParameter("prn"));
+    if (request.getParameter("fromDeletePage")==null)
+    {   //1. create cookies
+        Cookie Name=new Cookie("Name",request.getParameter("name"));
+        Cookie PRN=new Cookie("PRN",request.getParameter("prn"));
 
+        //2. set age
+        //cookies.setMaxAge(value);
+        Name.setMaxAge(60*60*24);
+        PRN.setMaxAge(60*60*24);
 
-    //2.set age
-    //cookies.setMaxAge(value);
-    Name.setMaxAge(60*60*24);
-    PRN.setMaxAge(60*60*24);
-
-    //add cookies in response
-
-    response.addCookie(Name);
-    response.addCookie(PRN);
+        //3. add cookies in response
+        response.addCookie(Name);
+        response.addCookie(PRN);
+    }
 %>
 
 <html>
@@ -44,7 +43,7 @@
     </style>
 </head>
 <body>
-<h1 style="color:green">Cookies Added Successfully!</h1>
+<h1 style="color:green">View Cookies</h1>
 <center>
 <table border="1">
 <%
@@ -54,16 +53,27 @@
     cookie = request.getCookies();
     out.println("Cookies are stored in the Browser for the site : <b>"+request.getRequestURI()+"<b><br><br><hr>");
     if (cookie!=null){
+        out.println("<tr><th>Key</th><th>Value</th><th>Action</th></tr>");
         for (int i=0;i < cookie.length;i++){
             ck=cookie[i];
-            out.println("<tr><td>Key ------>  "+ck.getName()+"</td>");
-            out.println("<td>Value ------> "+ck.getValue()+"</td></tr>");
+            out.println("<tr><td>"+ck.getName()+"</td>");
+            out.println("<td>"+ck.getValue()+"</td>");
+    %>
+            <td><form method='get' action='DeleteCookies.jsp'>
+                    <input type="hidden" value="<%=ck.getName() %>" name="cookie_to_be_deleted"> 
+                    <input type='submit' name='submit' value='Delete Cookies'>
+            </form></td></tr>
+    <%
         }
     }else{
 
     }
 %>
 </table>
+<br><br>
+<a href="../">
+    <button value="Back" name="back" id="back">Back</button>
+</a>
 </center>
 </body>
 </html>
