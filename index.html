@@ -1,6 +1,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="css/function_1.css">
+	<link rel="stylesheet" href="css/function_2.css">
 <style>
 	body {
 		margin: 0;
@@ -18,6 +19,7 @@
 		-webkit-box-shadow: 0 8px 6px -6px #999;
 		-moz-box-shadow: 0 8px 6px -6px #999;
 		box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+		z-index: 999;
 	}
 	
 	.logo {
@@ -123,27 +125,47 @@
 		<span></span>
 	</a>
 	<div id="menu">
-		<a href="servlets/Servlet_1">HTTP Servlet_1</a>
-		<a href="servlets/Servlet_2">Generic Servlet</a>
-		<a href="#addition">Addition</a>
-		<a href="jsp/Jsp_Demo.jsp">JSP Demo</a>
+		<a href="Servlet_1">HTTP Servlet_1</a>
+		<a href="Servlet_2">Generic Servlet</a>
+		<a href="#p">Addition</a>
+		<a href="jsp/Jsp_Demo.jsp">JSP demo</a>
+		<a href="#cookies">Cookies demo</a>
 	</div>
 </div>
 
 <div class="header"></div>
 
-<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+<p id="p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 
-<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+
+<hr>
+<br>
+<center>
+<h1>Addition</h1>
+</center>
+<div class="function_1" id="addition">
+	
+	<form action="Servlet_3">
+		<input type="text" placeholder="Enter first number" id="n1" name="n1">  
+		<input type="text" placeholder="Enter second number" id="n2" name="n2">  
+		<input type="submit" name="submit" id="submit" value="Addition">
+		<br>
+	</form>
+</div>
+<div class="shadow"></div>
 
 <hr>
 <br>
 
-<div class="function_1" id="addition">
-	<form action="servlets/Servlet_3">
-		<input type="text" placeholder="Enter first number" id="n1" name="n1">  
-		<input type="text" placeholder="Enter second number" id="n2" name="n2">  
-		<input type="submit" name="submit" id="submit" value="Addition">
+<center>
+	<h1>Cookies Demo</h1>
+</center>
+<div class="function_2" id="cookies">
+	<form action="jsp/CookiesDemo.jsp" method="get">
+		<input type="text" placeholder="Enter Name : " id="name" name="name">  
+		<input type="text" placeholder="Enter PRN : " id="prn" name="prn">  
+		<input type="submit" name="submit" id="submit" value="Submit">
 		<br>
 	</form>
 </div>
