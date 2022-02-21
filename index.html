@@ -1,18 +1,38 @@
 <html>
 <head>
+	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/function_1.css">
 	<link rel="stylesheet" href="css/function_2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 	body {
 		margin: 0;
 		padding: 0;
 	}
-	
+	.logo {
+		margin-left: 30px;
+		width: 270px;
+		height: 55px;
+		font-size: 1.5rem;
+		position: absolute;
+		top: 20%;
+		background: url('Images/header.png') no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+		margin-right: 10%;
+	}
+	.header {
+		width: 100%;
+		height: 600px;
+		background: url("Images/index_img_1.jpg") no-repeat 50% 50%;
+		background-size: cover;
+		margin-top: 80px;
+	}
 	.navbar {
 		position: fixed;
 		height: 80px;
 		width: 100%;
-		overflow: hidden;
+		/*overflow: hidden;*/
 		top: 0;
 		align-items: center;
 		background: #f1f1f1;
@@ -21,116 +41,30 @@
 		box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
 		z-index: 999;
 	}
-	
-	.logo {
-		margin-left: 20px;
-		width: 180px;
-		height: 50px;
-		font-size: 1.5rem;
-		position: absolute;
-		top: 30%;
-		background: url('Images/index_img_2.png') no-repeat;
-		background-size: cover;
-		background-position: 50% 50%;
-	}
-	#menu {
-		position: absolute;
-		right: 20px;
-		top: 35%;
-	}
-	
-	#menu a {
-		color: #333;
-		padding: 20px 20px 20px 20px;
-		text-decoration: none;
-		font-weight: 700;
-		margin-left: 20px;
-		transition: color 0.3s;
-		text-transform: uppercase;
-	}
-	
-	#menu a:hover {
-		color: #993af1;
-		background-color: #F9D636;
-	}
-	
-	.header {
-		width: 100%;
-		height: 600px;
-		background: url("Images/index_img_1.jpg") no-repeat 50% 50%;
-		background-size: cover;
-		margin-top: 80px;
-	}
-	
 	p {
 		padding: 20px;
 		font-size: 18px;
 		text-align: justify;
 	}
-	
-	#btn {
-		display: none;
-		position: absolute;
-		right: 20px;
-		top: 25%;
-	}
-	
-	#btn:hover > span {
-		background-color: #6ab04c;
-	}
-	
-	#btn span {
-		display: block;
-		margin: 6px;
-		width: 40px;
-		height: 3px;
-		background: #333;
-	}
-	
-	@media only screen and (max-width: 600px) {
-		.navbar {
-			overflow: visible;
-		}
-		#menu {
-			width: 100%;
-			right: 0;
-			top: 60px;
-			background: #f1f1f1;
-			overflow: hidden;
-			max-height: 0;
-		}
-		#menu a {
-			display: block;
-			text-align: center;
-			padding: 10px;
-			margin: 0;
-		}
-		#btn {
-			display: block;
-			cursor: pointer;
-		}
-		.show {
-			max-height: 500px;
-		}
-	}
+
 </style>
 </head>
 
-<div class="navbar">
-	<a href="/MIT/"><div class="logo"></div></a>
+<div class="navbar" id="navbar">
 	
-	<a id="btn">
-		<span></span>
-		<span></span>
-		<span></span>
-	</a>
-	<div id="menu">
-		<a href="Servlet_1">HTTP Servlet_1</a>
+	<a href="/MIT/"><div class="logo"></div></a>
+
+	<div class="topnav" id="myTopnav">
+		<a href="Servlet_1">Servlet Interface</a>
 		<a href="Servlet_2">Generic Servlet</a>
-		<a href="#p">Addition</a>
+		<a href="#p">Http Servlet</a>
 		<a href="jsp/Jsp_Demo.jsp">JSP demo</a>
 		<a href="#cookies">Cookies demo</a>
-	</div>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+	  </div>
+
 </div>
 
 <div class="header"></div>
@@ -178,6 +112,16 @@
 
 <!-- Function used to shrink nav bar removing paddings and adding black background -->
 <script>
+
+	function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+		  x.className += " responsive";
+		} else {
+		  x.className = "topnav";
+		}
+	  }
+
 	$(window).scroll(function() {
 		if ($(document).scrollTop() > 50) {
 			$('.nav').addClass('affix');

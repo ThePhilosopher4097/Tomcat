@@ -13,6 +13,7 @@ public class Servlet_1 extends HttpServlet {
 
         String message = "<html><body><center><h3 style='color:blue;margin-top:100px;'>Hola mi amigo.... ! Como Estais ! <br> Yo soy Admin ! Bienbenido !</h3></center></body></html>";
         pw.println(message);
+        
         System.out.println("This is Service Method.");
         pw.close();
     }
