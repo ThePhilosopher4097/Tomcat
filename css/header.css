@@ -1,3 +1,18 @@
+
+.navbar {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  /*overflow: hidden;*/
+  top: 0;
+  align-items: center;
+  background: #f1f1f1;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+  z-index: 9999;
+}
+
 .topnav {
   position: relative;
   top: 10%;

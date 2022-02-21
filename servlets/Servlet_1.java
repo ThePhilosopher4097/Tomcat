@@ -2,19 +2,37 @@
 
 import java.io.*;
 import javax.servlet.*;
-import javax.servlet.http.*;
 
+public class Servlet_1 implements Servlet
+{
+  public void init(ServletConfig cong)
+  {
+    System.out.println("Starting....");
+  }
+  
+  public void service(ServletRequest req, ServletResponse res) throws IOException
+  {
+    System.out.println("Servicing....");
+    res.setContentType("text/html");
+    PrintWriter out=res.getWriter();  
 
-public class Servlet_1 extends HttpServlet {
+    int number = Integer.parseInt(req.getParameter("n1"));
+    int fact = 1;
+    for(int i=2;i<=number;i++)
+      fact *= i;
+    out.print("<center><h1 style='top:30%;'>The Factorial of "+number+" = "+fact+"</h1></center>");
+  }
+  
+  public void destroy() { }
 
-    public void service (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+  public ServletConfig getServletConfig()
+  { 
+    return null;
+  }
+  
+  public String getServletInfo()
+  {
+    return "Servlet Demo";
+  }
 
-        PrintWriter pw = res.getWriter();
-
-        String message = "<html><body><center><h3 style='color:blue;margin-top:100px;'>Hola mi amigo.... ! Como Estais ! <br> Yo soy Admin ! Bienbenido !</h3></center></body></html>";
-        pw.println(message);
-        
-        System.out.println("This is Service Method.");
-        pw.close();
-    }
 }

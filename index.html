@@ -28,17 +28,19 @@
 		background-size: cover;
 		margin-top: 80px;
 	}
-	.navbar {
-		position: fixed;
-		height: 80px;
-		width: 100%;
-		/*overflow: hidden;*/
-		top: 0;
-		align-items: center;
-		background: #f1f1f1;
-		-webkit-box-shadow: 0 8px 6px -6px #999;
-		-moz-box-shadow: 0 8px 6px -6px #999;
-		box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+	.flyer {
+		padding: 20px;
+		position: absolute;
+		top: 30%;
+		left: 35%;
+		color: #fff;
+		background: rgba( 155, 155, 155, 0.15 );
+		box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+		backdrop-filter: blur( 4px );
+		-webkit-backdrop-filter: blur( 4px );
+		border-radius: 10px;
+		border: 1px solid rgba( 255, 255, 255, 0.18 );
+		border-color: palevioletred;
 		z-index: 999;
 	}
 	p {
@@ -53,11 +55,10 @@
 <div class="navbar" id="navbar">
 	
 	<a href="/MIT/"><div class="logo"></div></a>
-
 	<div class="topnav" id="myTopnav">
-		<a href="Servlet_1">Servlet Interface</a>
-		<a href="Servlet_2">Generic Servlet</a>
-		<a href="#p">Http Servlet</a>
+		<a href="#p">Servlet Interface</a>
+		<a href="#shadow1">Generic Servlet</a>
+		<a href="#shadow2">Http Servlet</a>
 		<a href="jsp/Jsp_Demo.jsp">JSP demo</a>
 		<a href="#cookies">Cookies demo</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -68,9 +69,46 @@
 </div>
 
 <div class="header"></div>
+<center>
+	<div class="flyer" id="flyer">
+		<h1>Name: Sameer Manik Patil</h1><br><hr><br>
+		<h2>PRN: 0220200017<br><br>
+		Roll no: 243<br><br>
+		Batch: AJ-5<br><br>
+		Div: D (D3)</h2>
+	</div>
+</center>
 
 <p id="p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 
+
+<hr>
+<br>
+<center>
+<h1>Factorial of Number</h1>
+</center>
+<div class="function_1" style="height:170px" id="factorial">
+	<form action="Servlet_1">
+		<input type="text" placeholder="Enter any positive integer" id="n1" name="n1">  
+		<input type="submit" name="submit" id="submit" value="Find Factorial">
+	</form>
+</div>
+<div class="shadow" id="shadow1"></div>
+
+
+<hr>
+<br>
+<center>
+<h1>Permutations and Combinations (nCr & nPr)</h1>
+</center>
+<div class="function_1" id="combination">
+	<form action="Servlet_2">
+		<input type="text" placeholder="Enter n value" id="n1" name="n1">
+		<input type="text" placeholder="Enter r value" id="n2" name="n2">
+		<input type="submit" name="submit" id="submit" value="Calculate">
+	</form>
+</div>
+<div class="shadow" id="shadow2"></div>
 
 
 <hr>
@@ -79,11 +117,10 @@
 <h1>Addition</h1>
 </center>
 <div class="function_1" id="addition">
-	
 	<form action="Servlet_3">
 		<input type="text" placeholder="Enter first number" id="n1" name="n1">  
 		<input type="text" placeholder="Enter second number" id="n2" name="n2">  
-		<input type="submit" name="submit" id="submit" value="Addition">
+		<input type="submit" name="submit" id="submit" value="Add">
 		<br>
 	</form>
 </div>
@@ -91,7 +128,6 @@
 
 <hr>
 <br>
-
 <center>
 	<h1>Cookies Demo</h1>
 </center>
