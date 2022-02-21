@@ -2,6 +2,8 @@
 
 import java.io.*;
 import javax.servlet.*;
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;    
 
 public class Servlet_1 implements Servlet
 {
@@ -20,7 +22,10 @@ public class Servlet_1 implements Servlet
     int fact = 1;
     for(int i=2;i<=number;i++)
       fact *= i;
-    out.print("<center><h1 style='top:30%;'>The Factorial of "+number+" = "+fact+"</h1></center>");
+    out.print("<center><h1 style='top:30%;'>The Factorial of "+number+" = "+fact+"</h1>");
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+    LocalDateTime now = LocalDateTime.now();  
+    out.println("<br><hr><br><h2>Current Date and Time (India-GMT: +5:30): "+dtf.format(now)+"</h2></center>");
   }
   
   public void destroy() { }

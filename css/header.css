@@ -19,6 +19,7 @@
   margin-left: 30%;
   overflow: hidden;
   background-color: #f1f1f1;
+  z-index: 9990;
 }
   
   .topnav a {
@@ -30,6 +31,7 @@
     text-align: center;
     text-decoration: none;
     font-size: 20px;
+    z-index: 9980;
   }
   
   .topnav a:hover {
