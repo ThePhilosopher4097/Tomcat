@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1 style="color: red;">
-        Something went wrong!!!
+        Oops ! Divide by Zero -------> Infinity !!!
     </h1>
 </body>
 </html>

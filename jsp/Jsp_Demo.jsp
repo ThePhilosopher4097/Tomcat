@@ -9,9 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <%@
-        page    import="java.util.Random"
-                errorPage="Error.jsp"
-                isErrorPage="false"
+        page    language = "java"
+                contentType="text/html"
+                isThreadSafe = "true"
+                pageEncoding="ISO-8859-1"
+                autoFlush="false"
+                import = "java.util.Random, java.time.format.DateTimeFormatter, java.time.LocalDateTime"
+                errorPage = "Error.jsp"
+                isErrorPage = "false"
+                session = "true"
+                info="Sameer Patil's JSP Demo"
     %>
 </head>
 
@@ -19,33 +26,34 @@
     <%!
         int a = 3;
         int b = 3;
-        public int doSum(){
+        Random rand = new Random();
+
+        public int doSum(int a, int b){
             return a+b;
         }
-        public int doDiv(){
-            return a/b;
+        public double doDiv(int a, int b){
+            return (double)(a/b);
         }
     %>
+    <div style="top:80%">
+    <center>
     <h2 style="color: red;">
         <%
-            out.println("(Using Declaration function) Addition of "+a+" and "+b+" is -----> "+doSum());
+            int rnum_1 = rand.nextInt(100)-1;
+            int rnum_2 = rand.nextInt(100)-1;
+            out.println("(Using Declaration function) Addition of "+rnum_1+" and "+rnum_2+" is -----> "+doSum(rnum_1,rnum_2));
         %>
     </h2>
     <h2 style="color: green;">
-        <%="(Using Expression) Additions of "+a+" and "+b+" is -----> "+doSum()%>
-        <%="(Using Expression) Additions of "+a+" and "+b+" is -----> "+doDiv()%>
+        <%="(Using Expression) Quotient of "+rnum_1+" and "+rnum_2+" is -----> "+doDiv(rnum_1,rnum_2)%>
     </h2>
-    <h2>
-        <%
-            Random rand = new Random();
-            int rnum = rand.nextInt(10);
-            out.println("The Random Number = "+rnum);
-        %>
-    </h2>
+    </center>
+    </div>
 </body>
 </html>
 <br><br>
-<div style="margin-top: 10%;">
+<div style="margin-top: 1%;">
+
 <%@ 
     include file="Footer.jsp"
 %>
