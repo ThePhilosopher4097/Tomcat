@@ -40,7 +40,7 @@
     <h2 style="color: red;">
         <%
             int rnum_1 = rand.nextInt(100)-1;
-            int rnum_2 = rand.nextInt(100)-1;
+            int rnum_2 = rand.nextInt(10)-1;
             out.println("(Using Declaration function) Addition of "+rnum_1+" and "+rnum_2+" is -----> "+doSum(rnum_1,rnum_2));
         %>
     </h2>

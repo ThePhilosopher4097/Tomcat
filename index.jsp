@@ -1,3 +1,7 @@
+<%@ 
+	page session="true"
+%>
+
 <html>
 <head>
 	<link rel="stylesheet" href="css/header.css">
@@ -19,7 +23,7 @@
 		background: url('Images/header.png') no-repeat;
 		background-size: cover;
 		background-position: 50% 50%;
-		margin-right: 10%;
+		/*margin-right: 1%;*/
 	}
 	.header {
 		width: 100%;
@@ -63,6 +67,7 @@
 		<a href="#shadow2">Http Servlet</a>
 		<a href="jsp/Jsp_Demo.jsp">JSP demo</a>
 		<a href="#cookies">Cookies demo</a>
+		<a href="#session">Session Demo</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		  <i class="fa fa-bars"></i>
 		</a>
@@ -141,6 +146,29 @@
 		<br>
 	</form>
 </div>
+<div class="shadow"></div>
+
+<hr>
+<br>
+<center>
+<h1>JSP Session Tracking</h1>
+</center>
+<div class="function_1" id="session">
+	<form action="jsp/Page_1.jsp">
+		<input type="text" placeholder="Enter your fullname" id="name" name="name">
+		<input type="text" placeholder="Enter 10 digit PRN" id="prn" name="prn">
+		<input type="submit" name="submit" id="submit" value="Next">
+	</form>
+	<%
+		String error = request.getParameter("status");
+		String msg = request.getParameter("msg");
+		if (msg==null)	{
+			msg = ""; error = "";
+		}
+
+	%>
+</div>
+	<center><h2 style="color: red;"><%=error%><br><%=msg%></h2></center>
 <div class="shadow"></div>
 
 
