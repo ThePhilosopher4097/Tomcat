@@ -11,6 +11,7 @@
             UpdatedURL = response.encodeURL("Page2.jsp?User="+User+"&PRN="+PRN);
         }
         else{
+            session.setAttribute("VisitCount", 0);
             response.sendRedirect("/MIT/index.jsp?status=Invalid PRN&msg=Access Denied#session");
         }
     %>
