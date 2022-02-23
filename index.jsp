@@ -13,32 +13,19 @@
 		margin: 0;
 		padding: 0;
 	}
-	.logo {
-		margin-left: 30px;
-		width: 270px;
-		height: 55px;
-		font-size: 1.5rem;
-		position: absolute;
-		top: 20%;
-		background: url('Images/header.png') no-repeat;
-		background-size: cover;
-		background-position: 50% 50%;
-		/*margin-right: 1%;*/
-	}
 	.header {
 		width: 100%;
 		height: 600px;
 		background: url("Images/index_img_1.jpg") no-repeat 50% 50%;
 		background-size: cover;
 		margin-top: 80px;
-	}
+		z-index : 20;
+		padding-top: 5%;
+	  }
 	.flyer {
 		padding: 20px;
-		position: absolute;
-		top: 30%;
-		left: 35%;
 		color: #fff;
-		
+		width: 400px;
 		background: rgba( 0, 0, 0, 0.55 );
 		box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 		backdrop-filter: blur( 4px );
@@ -47,7 +34,7 @@
 		border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 		border-color: palevioletred;
-		z-index: 999;
+		z-index: 19;
 	}
 	p {
 		padding: 20px;
@@ -75,16 +62,18 @@
 
 </div>
 
-<div class="header"></div>
-<center>
-	<div class="flyer" id="flyer">
-		<h1>Name: Sameer Manik Patil</h1><br><hr><br>
-		<h2>PRN: 0220200017<br><br>
-		Roll no: 243<br><br>
-		Batch: AJ-5<br><br>
-		Div: D (D3)</h2>
-	</div>
-</center>
+<div class="header">
+	<center>
+		<div class="flyer" id="flyer">
+			<h1>Name: Sameer Manik Patil</h1><br><hr><br>
+			<h2>PRN: 0220200017<br><br>
+			Roll no: 243<br><br>
+			Batch: AJ-5<br><br>
+			Div: D (D3)</h2>
+		</div>
+	</center>
+</div>
+
 
 <p id="p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 
