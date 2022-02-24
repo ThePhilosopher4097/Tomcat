@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ 
 	page session="true"
 %>
@@ -41,6 +42,13 @@
 		font-size: 18px;
 		text-align: justify;
 	}
+	.box {
+		background: #eceeee;
+		border: 1px solid #42464b;
+		border-radius: 6px;
+		width: 300px;
+	  }
+	
 
 </style>
 </head>
@@ -55,6 +63,7 @@
 		<a href="jsp/Jsp_Demo.jsp">JSP demo</a>
 		<a href="#cookies">Cookies demo</a>
 		<a href="#session">Session Demo</a>
+		<a href="jsp/JSTL.jsp">JSTL Demo</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		  <i class="fa fa-bars"></i>
 		</a>
@@ -159,6 +168,7 @@
 </div>
 	<center><h2 style="color: red;"><%=error%><br><%=msg%></h2></center>
 <div class="shadow"></div>
+
 
 
 <!-- Jquery needed -->
