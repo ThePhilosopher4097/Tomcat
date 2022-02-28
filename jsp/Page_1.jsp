@@ -15,5 +15,5 @@
             response.sendRedirect("/MIT/index.jsp?status=Invalid PRN&msg=Access Denied#session");
         }
     %>
-    <a href="<%=UpdatedURL%>">Go to Page_2</a>
+    <a href="<%=UpdatedURL%>">Go to Page_2</a> 
 </h1>

@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/function_1.css">
 	<link rel="stylesheet" href="css/function_2.css">
+	<link rel="stylesheet" href="css/function_3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 	body {
@@ -134,17 +135,25 @@
 <hr>
 <br>
 <center>
-	<h1>Cookies Demo</h1>
+	<h1>Cookies Demo - Student Registration</h1>
 </center>
-<div class="function_2" id="cookies">
+<div class="function_3" id="cookies">
 	<form action="jsp/CookiesDemo.jsp" method="post">
-		<input type="text" placeholder="Enter Name : " id="name" name="name">  
-		<input type="text" placeholder="Enter PRN : " id="prn" name="prn">  
+		<table>
+		<tr>Name : <input type="text" placeholder="Enter Name : " id="name" name="name" required>  <br></tr>
+		<tr>PRN : <input type="text" placeholder="Enter PRN : " id="prn" name="prn" required><br><br><br></tr>
+		<tr>Gender : 
+			<div style="margin-left:20%;margin-top:-16px">Male <input type="radio" value="Male" name="gender" id="male">
+			Female <input type="radio" name="gender" id="female" value="Female"></div><br></tr>
+		<tr>Address : <br><div style="margin-left:20%;margin-top:-16px"><textarea cols="20" rows="4" name="address"></textarea></div></tr>
+		<tr>Contact :<input type="text" placeholder="Enter mobile no" name="contact" id="contact"><br></tr>
+		<tr>Email :<input type="text" placeholder="Enter email address" name="email" id="email"><br></tr>
+		</table>
 		<input type="submit" name="submit" id="submit" value="Submit">
 		<br>
 	</form>
 </div>
-<div class="shadow"></div>
+<div class="shadow3"></div>
 
 <hr>
 <br>

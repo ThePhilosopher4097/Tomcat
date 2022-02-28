@@ -11,7 +11,7 @@
 <%
 
 Cookie ck=new Cookie(request.getParameter("cookie_to_be_deleted"), request.getParameter("cookie_to_be_deleted"));
-
+out.println("<h2 color='red'>Deleted Cookie = "+request.getParameter("cookie_to_be_deleted")+"</h2>");
 if(ck!=null)
 {
     ck.setMaxAge(0);
